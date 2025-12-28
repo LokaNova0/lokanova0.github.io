@@ -59,7 +59,38 @@ opacity:.7;
   right:16px;
   top:10px;
 }
+/* ===== MOBILE NAV FIX ===== */
+@media (max-width: 768px){
 
+  nav{
+    padding:10px 12px;
+  }
+
+  .menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+  }
+
+  nav a{
+    font-size:12px;
+    margin:0;
+    white-space:nowrap;
+  }
+
+  .lang{
+    position:static;
+    display:flex;
+    gap:6px;
+    margin-left:10px;
+  }
+
+  .lang button{
+    padding:4px 6px;
+    font-size:10px;
+  }
+}
 .lang button{
   background:#111;
   color:#fff;
