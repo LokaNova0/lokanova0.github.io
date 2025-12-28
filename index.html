@@ -12,35 +12,52 @@ url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover
 }
 h1{font-size:3rem;letter-spacing:3px;}
 section{padding:60px 20px;max-width:900px;margin:auto;}
-  nav{
+  .navbar{
 position:fixed;
 top:0;
 width:100%;
-padding:14px 0;
-background:rgba(0,0,0,.6);
+padding:10px 20px;
+background:rgba(0,0,0,.7);
 backdrop-filter:blur(6px);
-text-align:center;
+display:flex;
+align-items:center;
+justify-content:space-between;
 z-index:999;
 }
-nav a{
-margin:0 12px;
-color:#ccc;
+
+.logo img{
+height:34px;
+width:auto;
+}
+
+.menu a{
+margin-left:16px;
+color:#fff;
 text-decoration:none;
 font-size:.9rem;
 letter-spacing:1px;
 }
-nav a:hover{
-color:#fff;
+
+.menu a:hover{
+opacity:.7;
 }
 </style>
 </head>
 <body> 
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="works.html">Works</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
+  <nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="LokaNova Logo">
+    </a>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="works.html">Works</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
   </nav>
 <header>
   <div>
