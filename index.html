@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>LokaNova Studio</title>
+  <h1 data-en="LOKANOVA"
+    data-bn="লোকানোভা"
+    data-hi="लोकानोवा"
+    data-jp="ロカノヴァ">
+  LOKANOVA
+</h1>
+
+<p data-en="Independent Creative Studio"
+   data-bn="স্বাধীন সৃজনশীল স্টুডিও"
+   data-hi="स्वतंत्र रचनात्मक स्टूडियो"
+   data-jp="インディペンデント・クリエイティブ・スタジオ">
+  Independent Creative Studio
+</p>
 <style>
 body{margin:0;background:#0b0b0b;color:#f5f5f5;font-family:Arial;}
 header{
@@ -41,6 +54,26 @@ letter-spacing:1px;
 .menu a:hover{
 opacity:.7;
 }
+  .lang{
+  position:absolute;
+  right:16px;
+  top:10px;
+}
+
+.lang button{
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  margin:0 4px;
+  padding:6px 10px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.lang button:hover{
+  background:#fff;
+  color:#000;
+}
 </style>
 </head>
 <body> 
@@ -50,7 +83,12 @@ opacity:.7;
       <img src="logo.png" alt="LokaNova Logo">
     </a>
   </div>
-
+<div class="lang">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('bn')">বাংলা</button>
+  <button onclick="setLang('hi')">HI</button>
+  <button onclick="setLang('jp')">JP</button>
+</div>
   <div class="menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -80,6 +118,12 @@ opacity:.7;
   <h2>Contact</h2>
   <p>Email: yourmail@gmail.com</p>
 </section>
-
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.innerText = el.getAttribute('data-' + lang);
+  });
+}
+</script>
 </body>
 </html>
